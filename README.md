@@ -241,6 +241,3 @@
     -   Accept: application/json
 
 ---
-
-Para más detalles y pruebas, puedes importar la colección de Postman:  
-[Enlace a la colección](https://www.postman.com/buisuch-4641/workspace/prueba/collection/12080732-84ffb539-d769-442d-9dc0-6da4fa97561a?action=share&source=collection_link&creator=12080732)
