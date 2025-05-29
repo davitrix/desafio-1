@@ -1,0 +1,617 @@
+{
+    "info": {
+        "_postman_id": "84ffb539-d769-442d-9dc0-6da4fa97561a",
+        "name": "Desafio1",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "12080732",
+        "_collection_link": "https://www.postman.com/buisuch-4641/workspace/prueba/collection/12080732-84ffb539-d769-442d-9dc0-6da4fa97561a?action=share&source=collection_link&creator=12080732"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "davicii711@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "12345678",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{domain}}/login",
+                            "host": [
+                                "{{domain}}"
+                            ],
+                            "path": [
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "David Alvarado",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "davicii711@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "12345678",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_confirmation",
+                                    "value": "12345678",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{domain}}/register",
+                            "host": [
+                                "{{domain}}"
+                            ],
+                            "path": [
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "David Alvarado",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "davicii711@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "12345678",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_confirmation",
+                                    "value": "12345678",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{domain}}/logout",
+                            "host": [
+                                "{{domain}}"
+                            ],
+                            "path": [
+                                "logout"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Authenticated",
+            "item": [
+                {
+                    "name": "Monedas",
+                    "item": [
+                        {
+                            "name": "Index",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{token}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{domain}}/monedas",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "monedas"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Store",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{token}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"nombre\": \"Dolar\",\r\n    \"simbolo\": \"$\",\r\n    \"pais\": \"Estados Unidos\" \r\n}"
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/monedas",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "monedas"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Show",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{token}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{domain}}/monedas/5",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "monedas",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Update",
+                            "request": {
+                                "method": "PATCH",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"nombre\": \"Euro\",\r\n    \"simbolo\": \"E\",\r\n    \"pais\": \"España\" \r\n}"
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/monedas/4",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "monedas",
+                                        "4"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "formdata",
+                                    "formdata": [
+                                        {
+                                            "key": "nombre",
+                                            "value": "Euro",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "key": "simbolo",
+                                            "value": "E",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "key": "pais",
+                                            "value": "Europa",
+                                            "type": "text"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/monedas/3",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "monedas",
+                                        "3"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Criptomonedas",
+                    "item": [
+                        {
+                            "name": "Index",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/criptomonedas",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "criptomonedas"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "IndexByMoneda",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/criptomonedas?moneda_id=1",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "criptomonedas"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "moneda_id",
+                                            "value": "1"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Store",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{token}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"nombre\": \"Bitcoin\",\r\n    \"simbolo\": \"BTC\",\r\n    \"tecnologia\": \"Blockchain\",\r\n    \"monedas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"precio\": 2836\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"precio\": 20\r\n        }\r\n    ]\r\n}"
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/criptomonedas",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "criptomonedas"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Show",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{domain}}/criptomonedas/4",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "criptomonedas",
+                                        "4"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Update",
+                            "request": {
+                                "method": "PATCH",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"nombre\": \"Bitcoin\",\r\n    \"simbolo\": \"BTC\",\r\n    \"tecnologia\": \"Blockchain\",\r\n    \"monedas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"precio\": 2836\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"precio\": 20\r\n        }\r\n    ]\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{domain}}/criptomonedas/4",
+                                    "host": [
+                                        "{{domain}}"
+                                    ],
+                                    "path": [
+                                        "criptomonedas",
+                                        "4"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete",
+                            "request": {
+                                "method": "DELETE",
+                                "header": []
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [
+                    {
+                        "key": "token",
+                        "value": "{{token}}",
+                        "type": "string"
+                    }
+                ]
+            },
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "packages": {},
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "packages": {},
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "domain",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "key": "token",
+            "value": "",
+            "type": "string"
+        }
+    ]
+}
