@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Moneda\StoreRequest;
 use App\Http\Requests\Moneda\UpdateRequest;
 use App\Models\Moneda;
-use Illuminate\Http\Request;
 
 class MonedaController extends Controller
 {
@@ -16,6 +15,7 @@ class MonedaController extends Controller
     public function index()
     {
         $monedas = Moneda::all();
+
         return response()->json($monedas);
     }
 
@@ -25,6 +25,7 @@ class MonedaController extends Controller
     public function store(StoreRequest $request)
     {
         $moneda = Moneda::create($request->all());
+
         return response()->json($moneda, 201);
     }
 
@@ -34,6 +35,7 @@ class MonedaController extends Controller
     public function show(string $id)
     {
         $moneda = Moneda::findOrFail($id);
+
         return response()->json($moneda);
     }
 
@@ -44,6 +46,7 @@ class MonedaController extends Controller
     {
         $moneda = Moneda::findOrFail($id);
         $moneda->update($request->all());
+
         return response()->json($moneda);
     }
 
@@ -54,6 +57,7 @@ class MonedaController extends Controller
     {
         $moneda = Moneda::findOrFail($id);
         $moneda->delete();
+
         return response()->json(null, 204);
     }
 }

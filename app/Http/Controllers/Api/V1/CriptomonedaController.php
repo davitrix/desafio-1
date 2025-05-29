@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Criptomoneda\StoreRequest;
 use App\Http\Requests\Criptomoneda\UpdateRequest;
 use App\Models\Criptomoneda;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CriptomonedaController extends Controller
@@ -17,6 +16,7 @@ class CriptomonedaController extends Controller
     public function index()
     {
         $criptomonedas = Criptomoneda::with('monedas')->get();
+
         return response()->json($criptomonedas, 200);
     }
 
@@ -51,6 +51,7 @@ class CriptomonedaController extends Controller
     public function show(string $id)
     {
         $criptomoneda = Criptomoneda::with('monedas')->findOrFail($id);
+
         return response()->json($criptomoneda, 200);
     }
 
@@ -87,6 +88,7 @@ class CriptomonedaController extends Controller
     {
         $criptomoneda = Criptomoneda::findOrFail($id);
         $criptomoneda->delete();
+
         return response()->json(null, 204);
     }
 }

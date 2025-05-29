@@ -22,8 +22,8 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required|string|max:255|unique:criptomonedas,nombre,' . $this->route('criptomoneda'),
-            'simbolo' => 'required|string|max:10|unique:criptomonedas,simbolo,' . $this->route('criptomoneda'),
+            'nombre' => 'required|string|max:255|unique:criptomonedas,nombre,'.$this->route('criptomoneda'),
+            'simbolo' => 'required|string|max:10|unique:criptomonedas,simbolo,'.$this->route('criptomoneda'),
             'tecnologia' => 'required|string|max:255',
 
             'monedas' => 'array',

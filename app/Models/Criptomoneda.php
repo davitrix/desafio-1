@@ -12,7 +12,7 @@ class Criptomoneda extends Model
     protected $fillable = [
         'nombre',
         'simbolo',
-        'tecnologia'
+        'tecnologia',
     ];
 
     public function monedas(): BelongsToMany
