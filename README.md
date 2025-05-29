@@ -11,8 +11,8 @@
 1. **Clona el repositorio en tu PC local**
 
     ```bash
-    git clone https://github.com/tu-usuario/tu-repo.git
-    cd desafio1
+    git clone https://github.com/davitrix/desafio-1.git
+    cd desafio-1
     ```
 
 2. **Instala las dependencias de PHP**
@@ -47,13 +47,7 @@
     php artisan migrate
     ```
 
-6. **(Opcional) Pobla la base de datos con datos de prueba**
-
-    ```bash
-    php artisan db:seed
-    ```
-
-7. **Inicia el servidor de desarrollo**
+6. **Inicia el servidor de desarrollo**
     ```bash
     php artisan serve
     ```
