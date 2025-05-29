@@ -241,3 +241,7 @@
     -   Accept: application/json
 
 ---
+
+## Esquema de la base de datos
+
+<img src="./docs/database.svg">
