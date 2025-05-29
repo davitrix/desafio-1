@@ -70,7 +70,7 @@
 
 ### Variables de entorno
 
--   `{{domain}}`: Dominio base de la API (ejemplo: http://localhost:8000)
+-   `{{domain}}`: Dominio base de la API (ejemplo: http://localhost:8000/api)
 -   `{{token}}`: Token Bearer de autenticación (obtenido tras login)
 
 ---
