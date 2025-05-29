@@ -1,4 +1,4 @@
-# Desafio 1
+# Desafio 1 - Desarrollado con Laravel y Sanctum
 
 ## Requisitos previos
 
