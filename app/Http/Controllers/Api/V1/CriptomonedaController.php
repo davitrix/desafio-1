@@ -15,7 +15,11 @@ class CriptomonedaController extends Controller
      */
     public function index()
     {
-        $criptomonedas = Criptomoneda::with('monedas')->get();
+        $monedaId = request()->get('moneda_id');
+
+        $criptomonedas = Criptomoneda::with('monedas')
+            ->when($monedaId, fn($query) => $query->whereHas('monedas', fn($q) => $q->where('monedas.id', $monedaId)))
+            ->get();
 
         return response()->json($criptomonedas, 200);
     }
