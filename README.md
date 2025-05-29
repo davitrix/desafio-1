@@ -4,7 +4,7 @@
 
 -   PHP >= 8.2
 -   Composer
--   MySQL o MariaDB
+-   MySQL o PostgreSql
 
 ## Instrucciones de instalación
 
